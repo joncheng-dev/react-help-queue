@@ -52,15 +52,13 @@ describe("ticketListReducer", () => {
       type: "DELETE_TICKET",
       id: 1,
     };
-    expect(
-      ticketListReducer(currentState, action).toEqual({
-        2: {
-          names: "Spongebob and Patrick",
-          location: "drum-1",
-          issue: "Reducer has side effects.",
-          id: 2,
-        },
-      })
-    );
+    expect(ticketListReducer(currentState, action)).toEqual({
+      2: {
+        names: "Spongebob and Patrick",
+        location: "drum-1",
+        issue: "Reducer has side effects.",
+        id: 2,
+      },
+    });
   });
 });
